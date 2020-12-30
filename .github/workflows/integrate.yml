@@ -13,5 +13,6 @@ jobs:
         with:
           python-version: '3.x'
           architecture: 'x64'
+      - run: pip uninstall pylint
       - run: pip install -r test.requirements.txt
       - run: pytest /tests/test.py
