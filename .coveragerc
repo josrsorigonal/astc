@@ -1,0 +1,9 @@
+[paths]
+source =
+    astc
+
+[report]
+include =
+    astc/*
+omit =
+    */test/*
