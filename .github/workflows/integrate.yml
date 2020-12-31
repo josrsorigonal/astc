@@ -14,13 +14,11 @@ jobs:
         with:
           python-version: '3.x'
           architecture: 'x64'
-      - run: pip uninstall pylint
-      - run: pip install -r test.requirements.txt
-      - run: pytest /tests/test.py
-          architecture: 'x64'fvrd
       - name: Generate coverage report
         run: |
           pip install -r test.requirements.txt
+          pytest --cov=./ --cov-report=xml
+      - name: Upload coverage to Codecov
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
