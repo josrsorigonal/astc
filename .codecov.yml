@@ -1,0 +1,12 @@
+coverage:
+  precision: 2
+  round: down
+  range: "85...100"
+  status:
+    target: auto
+    threshold: 0%
+    paths:
+      - "astc"
+    branches:
+      - main
+    if_ci_failed: error
